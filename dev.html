@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>沈灯 ― 灯籠ヶ沢の祈り（開発版）</title>
+<!--
+  開発用: src/ の ES モジュールをそのまま読み込む版。
+  ブラウザは file:// からモジュールを読めないため、ローカルサーバー経由で開くこと。
+    例)  python3 -m http.server 8080   →   http://localhost:8080/dev.html
+  three.js / cannon-es は import map で CDN から読み込む (バージョン固定)。
+  遊ぶだけなら index.html (単体版・ダブルクリックで起動) を使う。
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Yuji+Syuku&family=Zen+Antique&display=swap">
+<style>:root{color-scheme:dark}html,body{height:100%;margin:0;background:#050607;color:#d9d0bd;overflow:hidden;overscroll-behavior:none;-webkit-text-size-adjust:100%}canvas{touch-action:none}#app{position:fixed;inset:0}canvas{display:block}</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+    "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app"></div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "chinto",
+  "version": "1.0.0",
+  "description": "沈灯 ― 灯籠ヶ沢の祈り（ブラウザ一人称ホラー）",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "build:dev": "node tools/build.mjs --dev",
+    "serve": "python3 -m http.server 8080"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cannon-es": "^0.20.0",
+    "esbuild": "^0.28.2",
+    "three": "^0.186.1"
+  },
+  "private": true
+}
